@@ -1,0 +1,13 @@
+.topbar {
+    background: #232123;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0rem 1rem 2rem;
+    color: whitesmoke;
+    font-size: 2rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+}
