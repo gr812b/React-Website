@@ -11,7 +11,7 @@ const Homepage = (props) => {
 
             <div className="homepage__hero">
                 <div className="homepage__hero-text">
-                    <h1>Welcome to the <span>MERN</span> Stack</h1>
+                    <h1>Welcome to the <span>Kai</span> page</h1>
                     <p>This is a full stack application using the MERN stack. It is built with React, Express, MongoDB, and Node.js. It is deployed on Heroku.</p>
                 </div>
             </div>
