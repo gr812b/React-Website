@@ -2,8 +2,9 @@ import '../css/app.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './Homepage';
 import Topbar from './Topbar';
+import { StockMarketPrediction, DiscordReminderBot, SelfDrivingBall, PassiveExoforearm, Voicecraft } from './projects';
 
-function App() {
+const App = () => {
 
   const projects = [
     { name: "Self Driving Ball", image: "https://via.placeholder.com/325x150", id: 1 },
@@ -25,7 +26,9 @@ function App() {
           }/>
           {projects.map(project => {
             return (
-              <Route path={`/${project.name}`} element={<div>{project.name}</div>} />
+              <Route path={`/${project.name.replace(/ /g, '')}`} element={
+              <StockMarketPrediction />} 
+              />
             )})}
           
         </Routes>

@@ -24,7 +24,7 @@ const Homepage = (props) => {
                 
                 {projects.map(project => {
                     return (
-                        <Link to={"/" + project.name} className="project" key={project.id}>
+                        <Link to={"/" + project.name.replace(/ /g, '')} className="project" key={project.id}>
                             <img src={project.image} alt={project.name} />
                             <h3>{project.name}</h3>
                         </Link>
