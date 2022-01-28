@@ -1,8 +1,7 @@
-import '../css/app.css';
+import '../styles/app.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './Homepage';
 import Topbar from './Topbar';
-import { StockMarketPrediction, DiscordReminderBot, SelfDrivingBall, PassiveExoforearm, Voicecraft } from './projects';
 
 const App = () => {
 
@@ -25,10 +24,13 @@ const App = () => {
           <div>Error 404 - Not Found</div>
           }/>
           {projects.map(project => {
+
+            const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;
+
             return (
               <Route path={`/${project.name.replace(/ /g, '')}`} element={
-              <StockMarketPrediction />} 
-              />
+                <ProjectElement />
+              }/>
             )})}
           
         </Routes>
