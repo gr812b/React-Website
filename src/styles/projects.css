@@ -7,12 +7,21 @@
 .project-links {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 0rem 3rem 0 0;
 }
 
 .project-links a {
     color:blue;
+}
+
+.project-description {
+    padding: 0 3rem;
+    margin-top: 3rem;
+    resize: horizontal;
+    overflow: auto;
+    border: 1px solid #ccc;
+    min-width: 10rem;
 }
 
