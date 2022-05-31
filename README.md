@@ -3,7 +3,7 @@
 This is my personal website showing off all the projects I have made so far. Currently is a WIP while I figure out how to be artistically creative.
 
 ## TODO
-Add unique styling to make the portfolio stand out. Tame and calm portfolio's get the idea across, but a unique website is what I am aiming for with this project
+Add unique styling to make the portfolio stand out (Definitely use some CSS library). Tame and calm portfolio's get the idea across, but a unique website is what I am aiming for with this project
 
 ### Customization
 Ideally, the website will have plenty of user customization available. How this information will be saved is TODO as well (probably cookies?)
