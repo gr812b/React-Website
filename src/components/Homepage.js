@@ -25,11 +25,16 @@ const Homepage = (props) => {
                 {projects.map(project => {
                     return (
                         <Link to={"/" + project.name.replace(/ /g, '')} className="project" key={project.id}>
-                            <img src={project.image} alt={project.name} />
+                            <img src={project.image} alt={project.name} height="135" />
                             <h3>{project.name}</h3>
                         </Link>
                     )})}
             </div>
+
+            <div className="homepage-contact">
+                <h1>Contact me</h1>
+            </div>
+
         </div>
     );
 }
