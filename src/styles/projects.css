@@ -1,27 +1,82 @@
-.project-container {
-    background-color: #f5f5f5;
-    padding: 0 0 0 3rem;
-    height: 100vh;
+/*Include slideshow CSS*/
+@import "react-slideshow-image/dist/styles.css";
+
+/*Normal CSS*/
+
+.project-intro{
+  padding: 5rem 3rem 4rem 3rem;
+  background-color: whitesmoke;
+}
+
+.project-toptop {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-blurb{
+  width: 80%;
 }
 
 .project-links {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0rem 3rem 0 0;
+    flex-flow: column wrap;
+    align-items: flex-start ;
+    padding: 0 5% 0 0;
+}
+
+.project-links > div {
+  padding: 0.25rem 0 0.25rem 0;
 }
 
 .project-links a {
-    color:blue;
+  color:blue;
 }
 
-.project-description {
-    padding: 0 3rem;
-    margin-top: 3rem;
-    resize: horizontal;
-    overflow: auto;
-    border: 1px solid #ccc;
-    min-width: 10rem;
+.project-slides{
+  padding: 0.5rem 0 0 0;
 }
+
+/*Slide CSS Below*/
+.each-slide > div {
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  justify-content: center;
+  background-size: contain;
+  background-position: center;
+  height: 27rem;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  opacity: 0.1;
+  text-align: center;
+}
+
+.each-slide span:hover {
+  opacity: 1;
+}
+
+/* Continue normal CSS :)*/
+
+.project-description {
+  padding: 0 3rem;
+  margin-top: 3rem;
+  resize: horizontal;
+  overflow: auto;
+  border: 1px solid #ccc;
+  min-width: 10rem;
+}
+
+.project-indepth {
+  background-color: #464246;
+  padding: 2rem 3rem 1.2rem 3rem;
+  color: #efefef;
+}
+
+
 
