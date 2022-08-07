@@ -65,7 +65,7 @@ const Voicecraft = (props) => {
                 <h2>Some more media :)</h2>
                 <div className="project-media">
                     <img src="https://i.imgur.com/Em5IaYu.png" alt="Voicecraft" />
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/alZYxxvEAFg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" title="voicecraft demo" src="https://www.youtube.com/embed/alZYxxvEAFg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     {/*PUT THE PROPER VIDEO */}https://www.youtube.com/embed/alZYxxvEAFg
                 </div>
 

@@ -6,6 +6,7 @@
 .project-intro{
   padding: 5rem 3rem 4rem 3rem;
   background-color: whitesmoke;
+  height: 90vh;
 }
 
 .project-toptop {
@@ -46,7 +47,7 @@
   justify-content: center;
   background-size: contain;
   background-position: center;
-  height: 27rem;
+  height: 60vh;
 }
 
 .each-slide span {

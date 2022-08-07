@@ -1,0 +1,12 @@
+.shop-center {
+    border: 2px solid;
+}
+
+.shop-center-top {
+    display: flex;
+}
+
+.shop-center-bottom {
+    display: flex;
+    flex-flow: column nowrap;
+}

@@ -8,4 +8,5 @@ Finalize home page
 2022-06-05 - Kai
 Add a scrollbar??
 Cleaner method to present text (maybe do like cardstock background esque stuff, wixy (https://www.2boyssmokehouse.com/))
+y-index
 
