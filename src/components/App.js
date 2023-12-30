@@ -1,4 +1,5 @@
 import '../styles/app.css';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from './Homepage';
 import Topbar from './Topbar';
@@ -15,12 +16,14 @@ const App = () => {
     { name: "project6", image: "https://via.placeholder.com/275x135", id: 0 },
   ]
 
+  const [bodyStyle, setBodyStyle] = useState({ overflow: '' });
+
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={bodyStyle}>
         <Topbar />
         <Routes>
-          <Route exact path="/" element={<Homepage projects={projects}/>} />
+          <Route exact path="/" element={<Homepage projects={projects} setBodyStyle={setBodyStyle}/>} />
           
           <Route path="*" element={
           <div style={{padding: "5rem 0 0 3rem"}}><h1>Error 404 - Not Found</h1></div>

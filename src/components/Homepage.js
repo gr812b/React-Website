@@ -1,29 +1,56 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/homepage.css';
+import Projects from './Projects.json';
 
-const Homepage = ( { projects } ) => {
+const Homepage = ( { projects, setBodyStyle } ) => {
     
     const [selectedProject, setSelectedProject] = useState(null);
 
     const closeModal = () => {
+        // Get the current top position (as a positive number)
+        const scrollY = parseInt(getComputedStyle(document.querySelector('.App')).top, 10) * -1;
+
+        setBodyStyle({ position: '', top: '' }); // Allow scrolling when the modal is closed
+        
         const dialog = document.querySelector('dialog');
         dialog.close();
+
         setSelectedProject(null); // Clear the selected project when the modal is closed
+
+        console.log(scrollY)
+        // Restore the scroll position
+        setTimeout(() => {
+            window.scrollTo(0, scrollY);
+        }, 0);
     }
 
     const openModal = (project) => {
-        setSelectedProject(project); // Store the selected project in the state
+        // Store the current scroll position
+        const scrollY = window.scrollY;
+
+        setSelectedProject(project); 
+
+        // Prevent scrolling when the modal is open
+        setBodyStyle({ position: 'fixed', top: `-${scrollY}px` });
+
         const dialog = document.querySelector('dialog');
         dialog.showModal();
     }
+    
 
     return (
         <div className="homepage">
-
-            <dialog className="modal" onClick={() => {closeModal()}}>
-                <h1>{selectedProject?.name}</h1>
-                <p>{selectedProject?.description}</p>
+            <dialog className="modal"  >
+                {Projects.projects.map(project => {
+                    if (project.name === selectedProject?.name) {
+                        const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;
+                        return (
+                            <ProjectElement />
+                        )
+                    }
+                })}
+                <button className="modal-close" onClick={closeModal}>X</button>
             </dialog>
             
 

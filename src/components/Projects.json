@@ -1,0 +1,46 @@
+{
+    "projects": [
+        {
+            "name": "Self Driving Ball",
+            "title": "Self Driving Ball",
+            "subtitle": "Pendulum driven self driving ball with remote controller",
+            "image": "https://media.wired.com/photos/5954825c5578bd7594c46383/master/w_2560%2Cc_limit/bb88-story.jpg",
+            "id": 5
+        },
+        {
+            "name": "Voicecraft",
+            "title": "Voicecraft",
+            "subtitle": "A computer program that allows you to control games with your voice",
+            "image": "https://i.imgur.com/Em5IaYu.png",
+            "id": 4
+        },
+        {
+            "name": "Discord Reminder Bot",
+            "title": "Discord Reminder Bot",
+            "subtitle": "A discord bot that allows you to set reminders with plain english",
+            "image": "https://camo.githubusercontent.com/d55d8a7f07a103454ebb77b653d9600ce27e011f78395d9713b432c8c011c76a/68747470733a2f2f646973636f72642e6a732e6f72672f7374617469632f6c6f676f2e737667",
+            "id": 3
+        },
+        {
+            "name": "Stock Market Prediction",
+            "title": "Stock Market Prediction",
+            "subtitle": "A program that uses machine learning to predict the stock market",
+            "image": "https://miro.medium.com/max/626/0*SaNg8uUaKCMQSS5g.jpg",
+            "id": 2
+        },
+        {
+            "name": "Passive Exoforearm",
+            "title": "Passive Exoforearm",
+            "subtitle": "Use of springs to assist in forearm movement for people with disabilities",
+            "image": "https://cdn.discordapp.com/attachments/817422927459778582/824736650181214209/unknown.png",
+            "id": 1
+        },
+        {
+            "name": "project6",
+            "title": "project6",
+            "subtitle": "subtitle6",
+            "image": "https://via.placeholder.com/275x135",
+            "id": 0
+        }
+    ]
+}

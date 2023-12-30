@@ -88,5 +88,22 @@ a {
 
 .project:hover p {
     transform: translateY(0);
-   
 }
+
+.modal {
+    width: 50%;
+    height: 90%;
+    overflow: auto;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.modal::backdrop {
+    background: hsl(0 0% 0% / 50%);
+  }
