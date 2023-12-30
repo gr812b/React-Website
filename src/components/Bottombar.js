@@ -17,7 +17,7 @@ const Bottombar = () => {
             
             <div className="bottombar-fineprint">
                 <div>All rights reserved Kai Arseneau 2022</div>
-                <div>
+                <div className="bottombar-links">
                     <Link to="/terms-and-conditions">Terms & Conditions</Link>
                     {' \u2022 '}
                     <Link to="/privacy-policy">Privacy Policy</Link>

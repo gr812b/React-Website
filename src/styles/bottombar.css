@@ -32,3 +32,7 @@
     justify-content: space-between;
     opacity: 0.7;
 }
+
+.bottombar-links a:hover {
+    text-decoration: underline;
+}

@@ -21,9 +21,11 @@ const App = () => {
         <Topbar />
         <Routes>
           <Route exact path="/" element={<Homepage projects={projects}/>} />
+          
           <Route path="*" element={
           <div style={{padding: "5rem 0 0 3rem"}}><h1>Error 404 - Not Found</h1></div>
           }/>
+
           {projects.map(project => {
 
             const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;
