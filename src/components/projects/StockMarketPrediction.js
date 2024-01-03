@@ -60,7 +60,7 @@ const StockMarketPrediction = (props) => {
 
                 <h2>Some more media :)</h2>
                 <div className="project-media">
-                    <iframe width="560" height="315" title="red-carpet-bb8" src="https://www.youtube.com/embed/RzzWmTIVv3c?t=2256s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" title="red-carpet-bb8" src="https://www.youtube.com/embed/RzzWmTIVv3c?t=2256s" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
 
                 <h2>Background</h2>

@@ -34,10 +34,11 @@ const App = () => {
             const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;
 
             return (
-              <Route path={`/${project.name.replace(/ /g, '')}`} element={
+              <Route path={`/${project.name.replace(/ /g, '')}`} key={project.id} element={
                 <ProjectElement />
               }/>
-            )})}
+            )
+          })}
           
         </Routes>
         <Bottombar />

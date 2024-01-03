@@ -18,7 +18,6 @@ const Homepage = ( { projects, setBodyStyle } ) => {
 
         setSelectedProject(null); // Clear the selected project when the modal is closed
 
-        console.log(scrollY)
         // Restore the scroll position
         setTimeout(() => {
             window.scrollTo(0, scrollY);
@@ -41,7 +40,6 @@ const Homepage = ( { projects, setBodyStyle } ) => {
     const modalClick = (event) => {
         const dialog = document.querySelector('dialog');
         var rect = dialog.getBoundingClientRect();
-        console.log("EVENT: ", event);
         var isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
             rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
         if (!isInDialog) {
@@ -52,12 +50,12 @@ const Homepage = ( { projects, setBodyStyle } ) => {
 
     return (
         <div className="homepage">
-            <dialog className="modal" onClick={(event) => {modalClick(event)}}>
+            <dialog className="modal" onMouseDown={modalClick}>
                 {Projects.projects.map(project => {
                     if (project.name === selectedProject?.name) {
                         const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;
                         return (
-                            <ProjectElement />
+                            <ProjectElement key={project.id} />
                         )
                     }
                 })}
