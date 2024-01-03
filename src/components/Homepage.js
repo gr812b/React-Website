@@ -37,11 +37,22 @@ const Homepage = ( { projects, setBodyStyle } ) => {
         const dialog = document.querySelector('dialog');
         dialog.showModal();
     }
+
+    const modalClick = (event) => {
+        const dialog = document.querySelector('dialog');
+        var rect = dialog.getBoundingClientRect();
+        console.log("EVENT: ", event);
+        var isInDialog = (rect.top <= event.clientY && event.clientY <= rect.top + rect.height &&
+            rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+        if (!isInDialog) {
+            closeModal();
+        }
+    }
     
 
     return (
         <div className="homepage">
-            <dialog className="modal"  >
+            <dialog className="modal" onClick={(event) => {modalClick(event)}}>
                 {Projects.projects.map(project => {
                     if (project.name === selectedProject?.name) {
                         const ProjectElement = require('./projects/' + project.name.replace(/ /g, '')).default;

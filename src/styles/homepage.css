@@ -1,5 +1,6 @@
 :root {
     --image-height: 9.5rem;
+    --animation-duration: 0.4s;
 }
 
 .homepage {
@@ -38,7 +39,7 @@ a {
     width: 100%;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
-    height: var(--image-height);;
+    height: var(--image-height);
 }
 
 .project h3 {
@@ -103,7 +104,55 @@ a {
     padding: 1rem;
     cursor: pointer;
 }
+/* Animations */
+dialog[open] {
+  opacity: 1;
+  transform: scaleY(1);
+}
 
-.modal::backdrop {
-    background: hsl(0 0% 0% / 50%);
+/*   Closed state of the dialog   */
+dialog {
+  opacity: 0;
+  transform: scaleY(0);
+  transition:
+    opacity var(--animation-duration) ease-out,
+    transform var(--animation-duration) ease-out,
+    overlay var(--animation-duration) ease-out allow-discrete,
+    display var(--animation-duration) ease-out allow-discrete;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+/*   Before-open state  */
+/* Needs to be after the previous dialog[open] rule to take effect,
+    as the specificity is the same */
+@starting-style {
+  dialog[open] {
+    opacity: 0;
+    transform: scaleY(0);
   }
+}
+
+/* Transition the :backdrop when the dialog modal is promoted to the top layer */
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0);
+  transition:
+    display 0.7s allow-discrete,
+    overlay 0.7s allow-discrete,
+    background-color 0.7s;
+  /* Equivalent to
+  transition: all 0.7s allow-discrete; */
+}
+
+dialog[open]::backdrop {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+/* This starting-style rule cannot be nested inside the above selector
+because the nesting selector cannot represent pseudo-elements. */
+
+@starting-style {
+  dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 0);
+  }
+}
