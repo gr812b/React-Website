@@ -3,9 +3,20 @@
 
 /*Normal CSS*/
 
+.project-title {
+  padding: 2rem 3rem 0 3rem;
+  /* add styles befitting a title */
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .project-intro{
-  padding: 5rem 3rem 4rem 3rem;
-  background-color: whitesmoke;
+  padding: 0rem 3rem 4rem 3rem;
+  background-image: linear-gradient(to bottom right, blueviolet, black);;
   height: 90vh;
 }
 

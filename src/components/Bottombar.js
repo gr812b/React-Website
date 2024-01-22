@@ -24,7 +24,7 @@ const Bottombar = () => {
                     {' \u2022 '}
                     <Link to="/cookies-policy">Cookies Policy</Link>
                 </div>
-                <div>Designed by ME!</div>
+                <div>Designed using React</div>
             </div>
         </div>
     );

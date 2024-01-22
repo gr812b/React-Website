@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/homepage.css';
 import Projects from './Projects.json';
@@ -58,6 +58,7 @@ const Homepage = ( { projects, setBodyStyle } ) => {
                             <ProjectElement key={project.id} />
                         )
                     }
+                    return null;
                 })}
                 <button className="modal-close" onClick={closeModal}>X</button>
             </dialog>

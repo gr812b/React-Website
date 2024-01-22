@@ -13,7 +13,7 @@ const SelfDrivingBall = (props) => {
         <div className="project-container">
             <div className="project-intro">
                 <div className="project-title">
-                    <h1>Travelling Globe</h1>
+                    Travelling Globe
                 </div>
                 <div className="project-toptop">
                     <div className="project-blurb">

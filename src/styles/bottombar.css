@@ -12,6 +12,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 2.5rem;
+}
+
+.socials {
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: -1rem;
 }
 
 .socials > a {
@@ -22,7 +31,12 @@
 
 .socials > a:hover {
     color: black;
-    background: white;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+.socials > a {
+    transition: all 0.15s ease-out;
 }
 
 .bottombar-fineprint {

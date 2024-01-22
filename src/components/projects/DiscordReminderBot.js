@@ -13,7 +13,7 @@ const DiscordReminderBot = (props) => {
         <div className="project-container">
             <div className="project-intro">
                 <div className="project-title">
-                    <h1>Discord Reminder Bot</h1>
+                    Discord Reminder Bot
                 </div>
                 <div className="project-toptop">
                     <div className="project-blurb">
