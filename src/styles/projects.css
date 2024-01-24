@@ -3,6 +3,10 @@
 
 /*Normal CSS*/
 
+.project-container {
+  color: white;
+}
+
 .project-title {
   padding: 2rem 3rem 0 3rem;
   /* add styles befitting a title */
@@ -16,7 +20,7 @@
 
 .project-intro{
   padding: 0rem 3rem 4rem 3rem;
-  background-image: linear-gradient(to bottom right, blueviolet, black);;
+  background-image: linear-gradient(blueviolet, black);;
   height: 90vh;
 }
 
@@ -64,7 +68,7 @@
 .each-slide span {
   padding: 20px;
   font-size: 20px;
-  background: #efefef;
+  background: black;
   opacity: 0.1;
   text-align: center;
 }
@@ -85,10 +89,7 @@
 }
 
 .project-indepth {
-  background-color: #464246;
+  background-color: black;
   padding: 2rem 3rem 1.2rem 3rem;
   color: #efefef;
 }
-
-
-
